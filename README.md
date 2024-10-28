@@ -1,4 +1,4 @@
-# Modern Reminders App
+# Reminders App
 
 A full-stack, responsive reminders application built with Next.js, featuring real-time search, calendar integration, and prioritization system.
 
