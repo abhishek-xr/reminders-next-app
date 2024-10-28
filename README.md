@@ -1,6 +1,9 @@
 # Reminders App
 
-A full-stack, responsive reminders application built with Next.js, featuring real-time search, calendar integration, and prioritization system.
+A full-stack, responsive reminders application built with Next.js, featuring real-time search, toast notifications, calendar integration, and prioritization system.
+
+<img width="1235" alt="reminder-screenshot1" src="https://github.com/user-attachments/assets/c17a5b34-1d8f-4732-a6e1-cbf110dbfd3c">
+<img width="1075" alt="reminder-screenshot2" src="https://github.com/user-attachments/assets/a0e3f7e5-8f5b-4c9d-9ecc-f161644d5966">
 
 ## Features
 
