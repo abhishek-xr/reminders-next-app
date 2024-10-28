@@ -1,36 +1,108 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Modern Reminders App
 
-## Getting Started
+A full-stack, responsive reminders application built with Next.js, featuring real-time search, calendar integration, and prioritization system.
 
-First, run the development server:
+## Features
 
+- 🎯 **Priority-based Task Management**: High, Medium, and Low priority levels with visual indicators
+- 📅 **Calendar Integration**: Visual date picker with reminder indicators
+- 🔍 **Real-time Search**: Instant search across all reminder fields
+- 🔄 **Smart Filtering**: Filter by date, priority, status, and more
+- ↩️ **Undo Actions**: Restore accidentally deleted reminders
+- ⌨️ **Keyboard Shortcuts**: Quick access with keyboard commands
+
+## Tech Stack
+
+- **Frontend**:
+  - Next.js 13 (App Router)
+  - React 18
+  - TypeScript
+  - Tailwind CSS
+  - Framer Motion
+  - shadcn/ui
+  - date-fns
+  - react-hot-toast
+
+- **Backend**:
+  - Next.js API Routes
+  - Prisma
+  - PostgreSQL
+
+## Prerequisites
+Please ensure you have installed:
+- Node.js (version 18.0 or higher)
+- npm or yarn
+- PostgreSQL
+
+## Installation
+
+1. Clone the repo:
+```bash
+git clone https://github.com/yourusername/reminders-app.git
+cd reminders-app
+```
+
+2. Install dependencies:
+```bash
+npm install
+# or
+yarn install
+```
+
+3. Set up your environment variables:
+```bash
+cp .env.example .env
+```
+
+Update `.env` with your DB credentials:
+```env
+DATABASE_URL="postgresql://user:password@localhost:5432/reminders"
+```
+
+4. Set up the DB:
+```bash
+npx prisma generate
+npx prisma db push
+```
+
+5. Run the development server:
 ```bash
 npm run dev
 # or
 yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+6. Open [http://localhost:3000](http://localhost:3000) in your browser.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-## Learn More
+## API Routes
 
-To learn more about Next.js, take a look at the following resources:
+```typescript
+GET    /api/reminders      // Fetch all reminders
+POST   /api/reminders      // Create new reminder
+PUT    /api/reminders/:id  // Update reminder
+DELETE /api/reminders/:id  // Delete reminder
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Performance Considerations
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- Memoized filtering operations
+- Debounced search input
+- Optimistic updates
+- Proper error boundaries
+- Efficient re-renders
 
-## Deploy on Vercel
+## If you wish to contribute
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Contact
+
+Abhishek - [@abhishekxr](https://www.linkedin.com/in/abhishekxr)
+
